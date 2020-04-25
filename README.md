@@ -6,7 +6,9 @@ IOT(Internet of things) platform based on Node-Red, Easy but very useful to buil
 
 # Config DB
 only support mongoDB
+
 dir /user_settings/index.js  ->  db_url
+
 input your own mongoDB server address
 
 # Start to run
@@ -15,7 +17,9 @@ input your own mongoDB server address
 # Create admin account
 input below command in terminal:
 > node utils/createUser.js username password
+
 or
+
 ```
 cd utils
 node createUser.js username password
@@ -25,9 +29,10 @@ node createUser.js username password
 
 # Test
 input url in browser: localhost:3000/login
+
 you can see the web pages
 
-![login](./login.png)
+![login](https://github.com/xqli82/Red-Things/blob/master/login.png)
 
 # Interface
 + /login  all url's entry
