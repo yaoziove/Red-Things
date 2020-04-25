@@ -65,8 +65,9 @@
 						console.log(data)
 						if (data.code == 200) {
 							Cookies.set('token', data.token)
+							window.location.href='/main'
 						}
-						// window.location.href='/user'
+						
 					})
 					.catch(err => {
 						console.log(err)

@@ -53,13 +53,15 @@ app.use(settings.httpAdminRoot, RED.httpAdmin);
 // Serve the http nodes UI from /api
 app.use(settings.httpNodeRoot, RED.httpNode);
 
-// app.use(function (err, req, res, next) {
-//   if (err) {
-//     res.send('sorry,error coming...')
-//   }
-// })
+app.use(function (err, req, res, next) {
+  if (err) {
+    res.send('sorry,error coming...')
+  }
+})
 
-server.listen(userSettings.port);
+server.listen(userSettings.port,function(){
+  console.log(`--------------------------server is running on port:${userSettings.port}--------------------------------`)
+});
 
 server.msg = "server nihao"
 
